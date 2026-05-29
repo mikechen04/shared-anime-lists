@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Privacy - SharedAnime</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family: 'Inter', system-ui, sans-serif;
+        background: #f7f6f1;
+        background-image: radial-gradient(circle, #d4d2cb 1px, transparent 1px);
+        background-size: 24px 24px;
+        color: #111;
+        line-height: 1.65;
+        min-height: 100vh;
+      }
+      .wrap {
+        max-width: 640px;
+        margin: 0 auto;
+        padding: 48px 20px 80px;
+      }
+      h1 {
+        font-size: 1.75rem;
+        margin-bottom: 8px;
+      }
+      .back {
+        display: inline-block;
+        margin-bottom: 32px;
+        color: #6b6b6b;
+        font-size: 0.9rem;
+      }
+      .back:hover {
+        color: #111;
+      }
+      h2 {
+        font-size: 1rem;
+        margin: 24px 0 8px;
+      }
+      p,
+      li {
+        color: #444;
+        font-size: 0.95rem;
+        margin-bottom: 12px;
+      }
+      ul {
+        padding-left: 1.25rem;
+        margin-bottom: 12px;
+      }
+      .note {
+        font-size: 0.85rem;
+        color: #6b6b6b;
+        margin-top: 32px;
+        padding-top: 20px;
+        border-top: 1px solid #e8e6df;
+      }
+      footer {
+        margin-top: 40px;
+        text-align: center;
+        font-size: 0.85rem;
+        color: #6b6b6b;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <a class="back" href="/">← Back to SharedAnime</a>
+      <h1>Privacy</h1>
+      <p>Last updated: May 2026</p>
+
+      <h2>What this site does</h2>
+      <p>
+        SharedAnime lets you enter public MyAnimeList or AniList usernames to find anime
+        everyone has completed. We do not ask for passwords or account logins.
+      </p>
+
+      <h2>What we collect</h2>
+      <ul>
+        <li>
+          <strong>Usernames you type</strong>, sent to our server so we can load public
+          lists from MyAnimeList and AniList.
+        </li>
+        <li>
+          <strong>Basic server logs</strong>: your hosting provider may log IP address,
+          browser type, and request time (standard web server stuff).
+        </li>
+      </ul>
+      <p>
+        We do not run user accounts and we do not intentionally store your search results
+        or usernames in a database after the request finishes.
+      </p>
+
+      <h2>Third parties</h2>
+      <p>When you search, we contact:</p>
+      <ul>
+        <li>MyAnimeList (public list data)</li>
+        <li>AniList (public list data via their API)</li>
+        <li>Image CDNs used by those sites for anime posters</li>
+      </ul>
+      <p>
+        Those services have their own privacy policies. We are not affiliated with
+        MyAnimeList or AniList.
+      </p>
+
+      <h2>Rate limits</h2>
+      <p>
+        To avoid overloading external services, we limit how many searches you can run per
+        minute from the same connection.
+      </p>
+
+      <h2>Contact</h2>
+      <p>
+        Questions about privacy? Open an issue on the project repository or contact whoever
+        operates this site.
+      </p>
+
+      <p class="note">
+        This page is plain-language information, not legal advice. Laws vary by country; ask
+        a lawyer if you need formal compliance help.
+      </p>
+
+      <footer>not affiliated with MyAnimeList or AniList</footer>
+    </div>
+  </body>
+</html>

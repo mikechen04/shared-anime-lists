@@ -1,0 +1,21 @@
+{
+  "name": "sharedmallist",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently -k \"node server.mjs\" \"vite\"",
+    "dev:server": "node server.mjs",
+    "build": "tsc && vite build",
+    "start": "node server.mjs",
+    "preview": "npm run build && npm start"
+  },
+  "dependencies": {
+    "express": "^4.21.2"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.0",
+    "typescript": "~6.0.2",
+    "vite": "^8.0.12"
+  }
+}
