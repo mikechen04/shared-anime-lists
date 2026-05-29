@@ -1,5 +1,8 @@
 import './style.css'
 
+// empty on cloud run (same host). set on github pages build to your cloud run url
+const API_BASE = import.meta.env.VITE_API_URL || ''
+
 type Platform = 'mal' | 'anilist'
 
 type UserInput = {
@@ -259,7 +262,7 @@ async function findShared() {
   })
 
   try {
-    const res = await fetch('/api/shared?' + params.toString())
+    const res = await fetch(API_BASE + '/api/shared?' + params.toString())
     const data = await res.json()
 
     if (!res.ok) {

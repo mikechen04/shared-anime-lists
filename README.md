@@ -4,9 +4,17 @@ Find anime that **every** person in your group has on their **completed** list.
 
 Works with **MyAnimeList** and **AniList**. You can mix users from both sites in one search.
 
-**Live site:** https://shared-anime-lists-git-57346811168.northamerica-northeast2.run.app
+**Live site (Cloud Run):** https://shared-anime-lists-git-57346811168.northamerica-northeast2.run.app
+
+**GitHub Pages:** https://mikechen04.github.io/shared-anime-lists/ (frontend only; API runs on Cloud Run)
 
 Styled after the [AssetWise template](https://lovable.dev/dashboard/templates/apps/internal-tools/assetwise-asset-management-tracking-template).
+
+## Why GitHub Pages was blank
+
+GitHub Pages only hosts static files. This app needs a backend for `/api`. A blank page usually means JS/CSS loaded from the wrong path (`/assets/...` instead of `/shared-anime-lists/assets/...`). The workflow in `.github/workflows/deploy-pages.yml` fixes that and points the UI at Cloud Run.
+
+In GitHub repo **Settings → Pages → Build and deployment**, set source to **GitHub Actions**.
 
 ## Run locally
 

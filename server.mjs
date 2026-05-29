@@ -327,6 +327,23 @@ function intersectLists(lists) {
 app.use(express.json())
 app.set('trust proxy', 1)
 
+// let github pages frontend call this api
+app.use((req, res, next) => {
+  const origin = req.headers.origin
+  if (
+    origin &&
+    (origin.endsWith('.github.io') || origin.includes('localhost'))
+  ) {
+    res.setHeader('Access-Control-Allow-Origin', origin)
+    res.setHeader('Access-Control-Allow-Methods', 'GET, OPTIONS')
+    res.setHeader('Access-Control-Allow-Headers', 'Content-Type')
+  }
+  if (req.method === 'OPTIONS') {
+    return res.sendStatus(204)
+  }
+  next()
+})
+
 // simple rate limit - per ip, resets every minute
 const RATE_LIMIT_MAX = 8
 const RATE_LIMIT_WINDOW_MS = 60 * 1000
