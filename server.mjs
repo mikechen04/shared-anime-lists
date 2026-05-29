@@ -435,6 +435,14 @@ app.get('/api/shared', rateLimit, async (req, res) => {
       completed_count: l.anime.size,
     }))
 
+    // send each user's list so the frontend can toggle checkboxes
+    const lists_by_user = lists.map((l) => ({
+      label: l.label,
+      username: l.username,
+      platform: l.platform,
+      anime: Array.from(l.anime.values()),
+    }))
+
     res.json({
       users: users.map((u) => ({
         platform: u.platform,
@@ -442,6 +450,7 @@ app.get('/api/shared', rateLimit, async (req, res) => {
         label: makeScoreLabel(u.platform, u.username),
       })),
       stats,
+      lists_by_user,
       shared_count: shared.length,
       shared,
     })

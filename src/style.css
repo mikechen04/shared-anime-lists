@@ -311,10 +311,56 @@ body {
   margin-top: 4px;
 }
 
+.compare-section {
+  margin-bottom: 24px;
+}
+
+.compare-section h3,
 .results-section h3 {
   font-size: 0.95rem;
   font-weight: 600;
   margin-bottom: 14px;
+}
+
+.user-checkboxes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px 20px;
+  margin-bottom: 14px;
+}
+
+.user-check {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+.user-check input {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+.mutual-box {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: #f3f2ed;
+  padding: 14px 16px;
+  max-height: 320px;
+  overflow-y: auto;
+}
+
+.mutual-line {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--text);
+}
+
+.mutual-empty {
+  color: var(--text-muted);
+  font-size: 0.9rem;
 }
 
 .anime-list {
