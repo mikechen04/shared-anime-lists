@@ -1,0 +1,31 @@
+# builds docker image and deploys to cloud run in europe-west1
+steps:
+  - name: gcr.io/cloud-builders/docker
+    args:
+      - build
+      - -t
+      - europe-west1-docker.pkg.dev/$PROJECT_ID/cloud-run-source-deploy/shared-anime-lists/sharedanime-list:$SHORT_SHA
+      - -t
+      - europe-west1-docker.pkg.dev/$PROJECT_ID/cloud-run-source-deploy/shared-anime-lists/sharedanime-list:latest
+      - .
+
+  - name: gcr.io/cloud-builders/docker
+    args:
+      - push
+      - --all-tags
+      - europe-west1-docker.pkg.dev/$PROJECT_ID/cloud-run-source-deploy/shared-anime-lists/sharedanime-list
+
+  - name: gcr.io/google.com/cloudsdktool/cloud-sdk:slim
+    entrypoint: gcloud
+    args:
+      - run
+      - services
+      - update
+      - sharedanime-list
+      - --platform=managed
+      - --image=europe-west1-docker.pkg.dev/$PROJECT_ID/cloud-run-source-deploy/shared-anime-lists/sharedanime-list:$SHORT_SHA
+      - --region=europe-west1
+      - --quiet
+
+images:
+  - europe-west1-docker.pkg.dev/$PROJECT_ID/cloud-run-source-deploy/shared-anime-lists/sharedanime-list:$SHORT_SHA
