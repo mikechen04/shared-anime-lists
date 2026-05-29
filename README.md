@@ -4,7 +4,7 @@ Find anime that **every** person in your group has on their **completed** list.
 
 Works with **MyAnimeList** and **AniList**. You can mix users from both sites in one search.
 
-**Live site:** https://sharedanime-list-57346811168.europe-west1.run.app
+**Live site:** https://shared-anime-lists-git-57346811168.northamerica-northeast2.run.app
 
 Styled after the [AssetWise template](https://lovable.dev/dashboard/templates/apps/internal-tools/assetwise-asset-management-tracking-template).
 
