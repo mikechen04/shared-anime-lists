@@ -29,7 +29,8 @@ jobs:
       - name: Build for GitHub Pages
         run: npm run build
         env:
-          VITE_BASE_PATH: /shared-anime-lists/
+          # custom domain (anime.aheriez.cafe) serves from / not /shared-anime-lists/
+          VITE_BASE_PATH: /
           VITE_API_URL: https://shared-anime-lists-git-57346811168.northamerica-northeast2.run.app
 
       - uses: actions/upload-pages-artifact@v3

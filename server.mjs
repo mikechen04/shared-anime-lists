@@ -332,7 +332,9 @@ app.use((req, res, next) => {
   const origin = req.headers.origin
   if (
     origin &&
-    (origin.endsWith('.github.io') || origin.includes('localhost'))
+    (origin.endsWith('.github.io') ||
+      origin.includes('localhost') ||
+      origin.endsWith('.aheriez.cafe'))
   ) {
     res.setHeader('Access-Control-Allow-Origin', origin)
     res.setHeader('Access-Control-Allow-Methods', 'GET, OPTIONS')

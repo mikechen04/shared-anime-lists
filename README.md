@@ -6,7 +6,7 @@ Works with **MyAnimeList** and **AniList**. You can mix users from both sites in
 
 **Live site (Cloud Run):** https://shared-anime-lists-git-57346811168.northamerica-northeast2.run.app
 
-**GitHub Pages:** https://mikechen04.github.io/shared-anime-lists/ (frontend only; API runs on Cloud Run)
+**Custom domain (GitHub Pages):** https://anime.aheriez.cafe/ (frontend only; API runs on Cloud Run)
 
 Styled after the [AssetWise template](https://lovable.dev/dashboard/templates/apps/internal-tools/assetwise-asset-management-tracking-template).
 

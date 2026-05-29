@@ -2,6 +2,7 @@ import './style.css'
 
 // empty on cloud run (same host). set on github pages build to your cloud run url
 const API_BASE = import.meta.env.VITE_API_URL || ''
+const BASE = import.meta.env.BASE_URL || '/'
 
 type Platform = 'mal' | 'anilist'
 
@@ -74,7 +75,7 @@ app.innerHTML = `
 
   <footer class="site-footer">
     <p>not affiliated with MyAnimeList or AniList</p>
-    <p><a href="/privacy.html">privacy policy</a></p>
+    <p><a href="${BASE}privacy.html">privacy policy</a></p>
   </footer>
 </div>
 `
